@@ -23,4 +23,11 @@ Ce projet est un template pour démarrer rapidement une application React avec d
 ```bash
 git clone https://github.com/VeeGeR32/template-react-mongodb.git
 cd template-react-mongodb
+npm i
+npm run start
+```
+
+```bash
+cd backend/
+npx nodemon ./server.js
 ```
