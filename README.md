@@ -17,9 +17,6 @@ Ce projet est un template pour démarrer rapidement une application React avec d
 - MongoDB (local ou Atlas)
 
 ## Installation
-
-### Cloner le Répertoire
-
 ```bash
 git clone https://github.com/VeeGeR32/template-react-mongodb.git
 cd template-react-mongodb
@@ -27,6 +24,7 @@ npm i
 npm run start
 ```
 
+## Démarage du server
 ```bash
 cd backend/
 npx nodemon ./server.js
