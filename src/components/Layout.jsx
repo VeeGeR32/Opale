@@ -1,15 +1,37 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { HashLoader} from "react-spinners";
+import "./Layout.css"; // Assurez-vous d'importer le fichier CSS
 
 const Layout = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Simulate a loading time of 1 second
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
   return (
     <>
-        <nav></nav>
-        <Outlet />
-        <footer>
-            <p>&copy; 2021</p>
-        </footer>
+      {loading ? (
+        <div className="spinner-container">
+          <HashLoader />
+        </div>
+      ) : (
+        <>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </>
+      )}
     </>
-  )
+  );
 };
 
 export default Layout;
