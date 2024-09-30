@@ -10,9 +10,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="testimonials p-8">
-      <h2 className="text-2xl font-bold mb-8 text-center">Parce qu'un témoignage vaut mille mots :</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section className="testimonials w-full">
+      <h2 className="text-2xl font-bold text-center ">Parce qu'un témoignage vaut mille mots :</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full bg-[#ededf4] p-8">
         {testimonials.map((testimonial, index) => (
           <TestimonialCard key={index} text={testimonial.text} client={testimonial.client} position={testimonial.position} />
         ))}
@@ -22,3 +22,5 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+//bg-[#ededf4]

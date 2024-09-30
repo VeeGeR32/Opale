@@ -72,9 +72,9 @@ export default function Navbar() {
             case "/contact":
                 return "#FAF0CA";
             case "/approche":
-                return "#ccddfa"; // Add the background color for "Approach"
+                return "#c3e7ff"; // Add the background color for "Approach"
             default:
-                return "#e5e5f0";
+                return "transparent";
         }
     };
 

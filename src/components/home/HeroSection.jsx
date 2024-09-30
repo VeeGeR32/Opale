@@ -2,32 +2,24 @@ import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
-    <div className="h-[calc(60vh)]">
+    <div className="h-[calc(100vh-128px)]">
+      <img className='absolute top-0 -z-10 h-screen w-full object-cover' alt="" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F6188698.jpg&f=1&nofb=1&ipt=3ba2b9957b1f774befcb6a6492a6e7a6517f45173213aca3f1722bb042436405&ipo=images"></img>
       <div className="bg-cover bg-center h-full flex items-center justify-center">
-        <div className="flex flex-col-reverse lg:flex-row justify-around w-full items-center px-4 lg:px-40">
-          <div className="w-full lg:w-[500px] mb-8 lg:mb-0">
-            <h1 className="text-5xl lg:text-6xl mb-4 font-[poppins] text-black font-black uppercase flex flex-wrap justify-center lg:justify-center">
-              <div><span className="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]">Opale,&nbsp;</span>La&nbsp;</div>
-              beauté&nbsp;du&nbsp;<div><span className="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]">design,&nbsp;</span>la&nbsp;</div>force&nbsp;du&nbsp;<span className="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]">web</span>.
+        <div className="flex flex-col-reverse lg:flex-row justify-center w-full items-center px-4 lg:px-40">
+          <div className="w-full lg:w-[1300px] lg:mb-0 flex justify-center items-center flex-col gap-5">
+            <h1 className="text-5xl lg:text-8xl font-[poppins] text-black font-black uppercase text-center">
+              Opale, La beauté du design, la force du web.
             </h1>
-            {/* <h2 className="text-base sm:text-lg lg:text-xl font-normal mb-4 text-black font-[poppins] uppercase">
+            <h2 className="text-base sm:text-lg lg:text-xl font-normal mb-4 text-black font-[poppins] uppercase text-center">
               De la conception à la mise en ligne, nous créons des sites web qui captivent et convertissent.
-            </h2> */}
+            </h2>
             {/* Buttons */}
-            <div className="flex flex-col items-center sm:flex-row gap-2 justify-center lg:justify-center">
-              <Link
-                to="/services"
-                className="font-[poppins] bg-black text-white py-2 px-1 font-bold sm:text-lg lg:text-xl text-center flex justify-center items-center w-60"
-              >
-                Découvrir
-              </Link>
-              <Link
-                to="/contact"
-                className="font-[poppins] bg-white text-black py-2 px-1 font-bold sm:text-lg lg:text-xl text-center flex justify-center items-center w-60"
-              >
-                Nous contacter
-              </Link>
-            </div>
+            <Link
+              to="/services"
+              className="font-[poppins] bg-black text-bold text-white py-2 px-1 font-bold sm:text-lg lg:text-xl text-center flex justify-center items-center w-60"
+            >
+              Découvrir
+            </Link>
           </div>
         </div>
       </div>

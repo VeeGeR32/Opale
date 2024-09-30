@@ -13,7 +13,7 @@ const Footer = () => {
         case "/contact":
             return "#f9f2d6";
         case "/approche":
-            return "#b1d5f9";
+            return "#c3e7ff";
         default:
             return "#e0e0ec";
     }

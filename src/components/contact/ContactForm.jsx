@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { motion, useInView } from 'framer-motion';
+import { FaEnvelope } from 'react-icons/fa';
 
 const ContactForm = () => {
     const ref = useRef(null);
@@ -166,6 +167,12 @@ const ContactForm = () => {
                     </button>
                 </div>
             </form>
+            <div>
+                <div className="flex justify-center items-center mb-4">
+                    <FaEnvelope className="text-2xl text-gray-700 mr-2 -mt-1" />
+                    <h2 className="text-3xl font-bold text-center font-[poppins]">opale@contact.fr</h2>
+                </div>
+            </div>
         </motion.div>
     );
 };

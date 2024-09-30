@@ -11,7 +11,7 @@ const ServicesPreview = () => {
   ];
 
   return (
-    <section id="services" className="services-preview grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
+    <section id="services" className="bg-[#ededf4] services-preview grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
       {services.map(service => (
         <ServiceCard key={service.title} title={service.title} description={service.description} icon={service.icon} />
       ))}
