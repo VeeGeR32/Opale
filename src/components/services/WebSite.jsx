@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-export default function WebSite() {
+export default function   WebSite() {
   const card1Ref = useRef(null);
   const card2Ref = useRef(null);
   
@@ -30,14 +30,14 @@ export default function WebSite() {
   }, [isCard2InView]);
 
   return (
-    <div className='w-full min-h-[200vh] bg-[#EEE5E9]'>
+    <div className='w-full min-h-[200vh]'>
       {/* Video Section */}
       <div className='h-screen w-full overflow-hidden'>
         <video autoPlay muted loop className='w-full h-full object-cover' src='https://cdn.dribbble.com/userupload/16712211/file/original-ef74f677fa4452f64b44ce63c797a131.mp4'></video>
       </div>
       
       {/* Cards Section */}
-      <div className='h-screen w-full flex flex-col md:flex-row justify-around items-center p-4'>
+      <div className='md:h-screen w-full flex flex-col md:flex-row justify-around items-center p-4 h-fit'>
         
         {/* Card 1 */}
         <motion.div
@@ -45,14 +45,14 @@ export default function WebSite() {
           initial={{ opacity: 0, y: 50 }} // Starting state
           animate={triggerAnimation1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animate based on scroll
           transition={{ duration: 0.5 }} // Animation duration
-          className='card bg-[#f2edef] p-6 md:p-12 rounded-lg flex flex-col items-center w-full md:w-[40%] lg:w-[35%] cursor-pointer group'
+          className='bg-[#1e113e] p-6 md:p-12 rounded-lg flex flex-col items-center w-full md:w-[40%] lg:w-[35%] cursor-pointer group'
         >
-          <h2 className='text-xl md:text-2xl font-bold mb-4 font-[poppins] text-center'>Création de sites vitrines</h2>
+          <h2 className='text-xl md:text-2xl font-bold mb-4 font-[poppins] text-center text-white'>Création de sites vitrines</h2>
           <div className='overflow-hidden h-[340px] mb-4'>
             <video autoPlay muted loop className='w-full  group-hover:scale-125 transition-all overflow-hidden' src='https://cdn.dribbble.com/userupload/12986406/file/original-8f403dbcaa28f67ca81e6045584f3c41.mp4'></video>
           </div>
           <div className='h-[10vh]'>
-            <p className='text-center text-sm md:text-base font-[poppins]'>
+            <p className='text-center text-sm md:text-base font-[poppins] text-white'>
               Nous proposons la création de sites vitrines pour présenter votre entreprise et attirer des clients potentiels.
             </p>
           </div>
@@ -64,14 +64,14 @@ export default function WebSite() {
           initial={{ opacity: 0, y: 50 }} // Starting state
           animate={triggerAnimation2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animate based on scroll
           transition={{ duration: 0.5 }} // Animation duration
-          className='card bg-[#f2edef] p-6 md:p-12 rounded-lg flex flex-col items-center w-full md:w-[40%] lg:w-[35%] cursor-pointer group'
+          className='bg-[#1e113e] p-6 md:p-12 rounded-lg flex flex-col items-center w-full md:w-[40%] lg:w-[35%] cursor-pointer group'
         >
-          <h2 className='text-xl md:text-2xl font-bold mb-4 font-[poppins] text-center'>Création de sites full stack</h2>
+          <h2 className='text-white text-xl md:text-2xl font-bold mb-4 font-[poppins] text-center'>Création de sites full stack</h2>
           <div className='overflow-hidden h-[340px] mb-4'>
             <video autoPlay muted loop className='w-full group-hover:scale-125 transition-all' src='https://cdn.dribbble.com/userupload/12406686/file/original-bfbcb14f92da9f9b6b8b8f53cd62fb86.mp4'></video>
           </div>
           <div className='h-[10vh]'>
-            <p className='text-center text-sm md:text-base font-[poppins]'>
+            <p className='text-white text-center text-sm md:text-base font-[poppins]'>
               Nous offrons des solutions full stack pour le commerce en ligne, y compris la gestion des produits, des commandes et des paiements.
             </p>
           </div>

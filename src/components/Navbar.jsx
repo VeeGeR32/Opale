@@ -64,15 +64,18 @@ export default function Navbar() {
     }, [location]);
 
     const getBackgroundColor = () => {
+        if (isOpen && location.pathname === "/") {
+            return "#F39593"; // Remplacez #yourColor par la couleur de fond souhaitée
+        }
         switch (location.pathname) {
             case "/services":
-                return "#FBFFFE";
+                return "#e9e2f7";
             case "/about":
                 return "#d1eed9";
             case "/contact":
                 return "#FAF0CA";
             case "/approche":
-                return "#c3e7ff"; // Add the background color for "Approach"
+                return "#def2ff"; // Add the background color for "Approach"
             default:
                 return "transparent";
         }
@@ -113,10 +116,10 @@ export default function Navbar() {
                         <Link
                             draggable='false'
                             to="/services"
-                            className={`text-black ${location.pathname === "/services" ? "active" : ""} group`}
-                            data-color="bg-[#EEE5E9]"
+                            className={`text-black  ${location.pathname === "/services" ? "active" : ""} group`}
+                            data-color="bg-[#faf7ff]"
                             onClick={handleLinkClick}
-                            onMouseEnter={(e) => handleMouseEnter(e, 'bg-[#EEE5E9]')}
+                            onMouseEnter={(e) => handleMouseEnter(e, 'bg-[#faf7ff]')}
                             onMouseLeave={handleMouseLeave}
                         >
                             <div className={`px-3 py-1 rounded-lg ${location.pathname === "/services" ? "md:bg-transparent" : ""} hover:md:bg-transparent text-black font-[poppins] group-active:scale-90 transition-all`}>
@@ -128,10 +131,10 @@ export default function Navbar() {
                         <Link
                             draggable='false'
                             to="/approche"
-                            className={`text-black ${location.pathname === "/approche" ? "active" : ""} group`}
-                            data-color="bg-[#e7ebf3]"
+                            className={`text-black bg-[#f9fcff] ${location.pathname === "/approche" ? "active" : ""} group`}
+                            data-color="bg-[#f9fcff]"
                             onClick={handleLinkClick}
-                            onMouseEnter={(e) => handleMouseEnter(e, 'bg-[#e7ebf3]')}
+                            onMouseEnter={(e) => handleMouseEnter(e, 'bg-[#f9fcff]')}
                             onMouseLeave={handleMouseLeave}
                         >
                             <div className={`px-3 py-1 rounded-lg ${location.pathname === "/approche" ? "md:" : ""} hover:md: text-black font-[poppins] group-active:scale-90 transition-all`}>

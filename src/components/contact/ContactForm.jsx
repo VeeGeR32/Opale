@@ -22,6 +22,11 @@ const ContactForm = () => {
         visible: false
     });
 
+    const [emailNotification, setEmailNotification] = useState({
+        message: '',
+        visible: false
+    });
+
     // Utilisez useEffect pour déclencher l'animation chaque fois que l'élément entre dans la vue
     useEffect(() => {
         setAnimationTrigger(isInView); // Déclenche l'animation quand l'élément est dans la vue
@@ -59,6 +64,17 @@ const ContactForm = () => {
         }
     };
 
+    const handleEmailClick = () => {
+        navigator.clipboard.writeText('opale@contact.fr').then(() => {
+            setEmailNotification({ message: 'Copié', visible: true });
+            setTimeout(() => {
+                setEmailNotification({ message: '', visible: false });
+            }, 3000);
+        }).catch(err => {
+            console.error('Erreur lors de la copie dans le presse-papier: ', err);
+        });
+    };
+
     return (
         <motion.div
             ref={ref} // Ajoutez la référence ici
@@ -67,7 +83,7 @@ const ContactForm = () => {
             transition={{ duration: 0.5 }} // Durée de la transition
             className="bg-transparent"
         >
-            <form onSubmit={handleSubmit} className="p-12 rounded-lg w-full max-w-xl">
+            <form onSubmit={handleSubmit} className="p-12 rounded-lg w-full max-w-xl bg-white/30 backdrop-blur-md mb-5">
                 {notification.visible && (
                     <div className="mb-4 p-1 bg-green-700 text-white text-center rounded-full font-[poppins]">
                         {notification.message}
@@ -168,9 +184,14 @@ const ContactForm = () => {
                 </div>
             </form>
             <div>
-                <div className="flex justify-center items-center mb-4">
+                <div className="flex justify-center items-center mb-4 relative">
                     <FaEnvelope className="text-2xl text-gray-700 mr-2 -mt-1" />
-                    <h2 className="text-3xl font-bold text-center font-[poppins]">opale@contact.fr</h2>
+                    <h2 className="text-3xl font-bold text-center font-[poppins] cursor-pointer" onClick={handleEmailClick}>opale@contact.fr</h2>
+                    {emailNotification.visible && (
+                        <div className="absolute -top-[8px] -right-[20px] mt-2 px-4 py-1 bg-slate-300/30 backdrop-blur-md text-black text-center rounded-full font-[poppins]">
+                            {emailNotification.message}
+                        </div>
+                    )}
                 </div>
             </div>
         </motion.div>

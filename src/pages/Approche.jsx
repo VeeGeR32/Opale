@@ -1,12 +1,13 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
+import { useEffect } from 'react';
 
 const categories = [
     {
         title: 'Prise de contact et analyse des besoins',
         description: `Nous discutons de vos besoins, objectifs et budget. 
                   Ensuite, nous identifions les fonctionnalités requises et 
-                  analysons les contraintes techniques.`,
+                  analysons les contraintes.`,
         image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipartix.com%2Fwp-content%2Fuploads%2F2016%2F08%2FHandshake-clipart-2.jpg&f=1&nofb=1&ipt=af5523caffaf6020771c1e573394c33fb401b12cf14b825ba071cddd239af38e&ipo=images'
     },
     {
@@ -42,12 +43,15 @@ const categories = [
 ];
 
 const Approche = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
-        <div className="w-full p-8 bg-[#c3e7ff]">
-            <HeroSection title1={"VOTRE SATISFACTION,  "} title2={"NOTRE PRIORITé !"} />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+        <div className="w-full bg-[#def2ff]">
+            <HeroSection title1={"comment opale  "} title2={"travaille?"} />
+                <div className="flex flex-wrap justify-center items-center gap-6 relative p-6 bg-[#def2ff] rounded-md mx-32 w-fit">
                 {categories.map((category, index) => (
-                    <div key={index} className="bg-white shadow-md p-6 rounded-lg flex flex-col items-center relative">
+                    <div key={index} className="bg-white shadow-md p-6 rounded-lg flex flex-col items-center relative max-w-xl">
                         <img src={category.image} alt={category.title} className="w-full h-48 object-cover mb-4 rounded-lg select-none" />
                         <h3 className="text-2xl font-semibold mb-4">{`${index + 1}. ${category.title}`}</h3>
                         <p className="text-gray-700 text-center">{category.description}</p>

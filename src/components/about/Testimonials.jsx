@@ -102,17 +102,19 @@ export default function Testimonials() {
 
     return (
         <motion.div
-            className='bg-[#e6f4ea] w-full h-auto p-6 md:p-12 flex flex-col items-center justify-start'
+            className=' w-full h-auto p-6 md:p-12 flex flex-col items-center justify-start'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
             viewport={{ once: false }}
         >
             <h2 className='text-3xl md:text-6xl font-black mb-5 text-center font-[poppins] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]'>Ce que disent nos clients</h2>
-            <Slider {...settings} className='w-full'>
-                {testimonials.map((testimonial, index) => (
-                    <TestimonialCard key={index} {...testimonial} />
-                ))}
-            </Slider>
+            <div className='w-full h-full p-6 bg-[#e6f4ea]'>
+                <Slider {...settings}>
+                    {testimonials.map((testimonial, index) => (
+                        <TestimonialCard key={index} {...testimonial} />
+                    ))}
+                </Slider>
+            </div>
         </motion.div>
     );
 }

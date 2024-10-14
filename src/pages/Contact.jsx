@@ -9,7 +9,7 @@ const Contact = () => {
     }, []);
     return (
         <div className="flex flex-col justify-center items-center h-fit bg-[#FAF0CA]">
-            <HeroSection title1={"trvaillons"} title2={" ensemble !"} />
+            <HeroSection title1={"trvaillons"} title2={" ensemble!"} />
             <ContactForm />
         </div>
     );

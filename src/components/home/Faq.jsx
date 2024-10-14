@@ -31,11 +31,15 @@ const Faq = () => {
     };
 
     return (
-        <div className='w-full h-fit bg-[#EEE5E9]'>
-            <div className="max-w-2xl mx-auto p-4 h-fit">
+        <div className='w-full h-fit p-12 relative bg-[#F39593]'>
+            <h2 className='text-3xl md:text-6xl font-black mb-5 text-center font-[poppins] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]'>
+                <span className='block md:hidden'>Q/R</span>
+                <span className='hidden md:block'>Questions/Réponses</span>
+            </h2>
+            <div className="max-w-2xl mx-auto p-6 h-fit bg-[#faa4a2] rounded-lg">
                 <div className='rounded-md overflow-hidden'>
                 {faqs.map((faq, index) => (
-                    <div key={index} className="border-b-2 border-[#EEE5E9] bg-[#f7f1f4]">
+                    <div key={index} className="border-b-2 border-[#EEE5E9]/30 bg-[#f7f1f4]/30">
                         <button
                             className="w-full text-left p-4 focus:outline-none"
                             onClick={() => toggleFaq(index)}
@@ -43,7 +47,7 @@ const Faq = () => {
                             <h3 className="text-lg font-semibold font-[poppins]">{faq.question}</h3>
                         </button>
                         {activeIndex === index && (
-                            <div className="p-4 bg-white border-gray-200 font-[poppins]">
+                            <div className="p-4 bg-white/30 border-gray-200 font-[poppins]">
                                 <p>{faq.answer}</p>
                             </div>
                         )}
