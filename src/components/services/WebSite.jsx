@@ -37,7 +37,7 @@ export default function   WebSite() {
       </div>
       
       {/* Cards Section */}
-      <div className='md:h-screen w-full flex flex-col md:flex-row justify-around items-center p-4 h-fit'>
+      <div className='md:h-screen w-full flex flex-col md:flex-row justify-around items-center p-4 h-fit  bg-gradient-to-t from-[#f3effd] to-[#d9cfee] via-[#f3effd]'>
         
         {/* Card 1 */}
         <motion.div

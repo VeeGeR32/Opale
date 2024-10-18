@@ -31,7 +31,7 @@ const Faq = () => {
     };
 
     return (
-        <div className='w-full h-fit p-12 relative bg-[#F39593]'>
+        <div className='w-full h-fit p-12 relative  bg-gradient-to-t from-[#f28684] to-[#f3b7b6]'>
             <h2 className='text-3xl md:text-6xl font-black mb-5 text-center font-[poppins] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]'>
                 <span className='block md:hidden'>Q/R</span>
                 <span className='hidden md:block'>Questions/Réponses</span>

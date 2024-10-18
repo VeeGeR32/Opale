@@ -69,7 +69,7 @@ export default function Navbar() {
         }
         switch (location.pathname) {
             case "/services":
-                return "#e9e2f7";
+                return "#fde6e6";
             case "/about":
                 return "#d1eed9";
             case "/contact":

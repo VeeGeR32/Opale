@@ -14,7 +14,7 @@ const About = () => {
 }, []);
   return (
     <div className="bg-[#d1eed9]">
-      <HeroSection title1={"QUI SOMMES "} title2={"NOUS ?"} />
+      <HeroSection title1={"QUI "} title2={"SOMMES NOUS?"} />
       <Presentation />
       <Mission />
       <Testimonials />

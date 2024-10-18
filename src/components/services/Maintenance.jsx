@@ -16,7 +16,7 @@ const Maintenance = () => {
   }, [isInView]);
 
   return (
-    <div className='min-h-screen p-6'>
+    <div className='min-h-screen p-6  bg-gradient-to-t from-[#e5d7ff] to-[#f3effd]'>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}

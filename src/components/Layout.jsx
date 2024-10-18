@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { HashLoader} from "react-spinners";
+import Header from "./header";
 import "./Layout.css"; // Assurez-vous d'importer le fichier CSS
 
 const Layout = () => {
@@ -25,6 +26,7 @@ const Layout = () => {
         </div>
       ) : (
         <>
+          <Header />
           <Navbar />
           <Outlet />
           <Footer />

@@ -12,7 +12,7 @@ export default function Mission() {
       <div className='text-center'>
       <h2 className='text-3xl md:text-6xl font-black mb-5 text-center font-[poppins] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]'>Notre mission</h2>
       <p className='text-lg max-w-[600px] mx-auto'>
-          Je m'engage à offrir des services de développement web de haute qualité, en garantissant une communication fluide, des délais respectés et une satisfaction client optimale.
+          Nous nous engageons à offrir des services de développement web de haute qualité, en garantissant une communication fluide, des délais respectés et une satisfaction client optimale.
         </p>
       </div>
     </motion.div>

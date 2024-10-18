@@ -103,7 +103,7 @@ export default function Testimonials() {
 
     return (
         <div
-            className='w-full h-auto p-6 md:p-12 flex flex-col items-center justify-start overflow-hidden bg-[#F39593]'
+            className='w-full h-auto p-6 md:p-12 flex flex-col items-center justify-start overflow-hidden bg-[#f3b7b6]'
         >
             <h2 className='text-3xl md:text-6xl font-black mb-5 text-center font-[poppins] text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]'>Ce que disent nos clients</h2>
             <div className='bg-[#faa4a2] w-full h-fit p-6 rounded-lg'>

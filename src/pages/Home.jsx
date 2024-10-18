@@ -14,7 +14,7 @@ function Home() {
     <div className="">
       <HeroSection />
       <ServicePreview />
-      <div className="bg-[#F39593]">
+      <div className="bg-gradient-to-t from-[#f3b7b6] to-[#F39593]">
         <div className="p-12">
           <video loop muted autoPlay className=" w-[100%] h-screen object-cover p-6 bg-[#faa4a2] rounded-md" src="https://cdn.dribbble.com/userupload/10672393/file/original-e315d0f9c9afd6f4122be00dd64755eb.mp4"></video>
         </div>

@@ -48,7 +48,7 @@ const Approche = () => {
       }, []);
     return (
         <div className="w-full bg-[#def2ff]">
-            <HeroSection title1={"comment opale  "} title2={"travaille?"} />
+            <HeroSection title1={"comment "} title2={"travaillons nous?"} />
                 <div className="flex flex-wrap justify-center items-center gap-6 relative p-6 bg-[#def2ff] rounded-md mx-32 w-fit">
                 {categories.map((category, index) => (
                     <div key={index} className="bg-white shadow-md p-6 rounded-lg flex flex-col items-center relative max-w-xl">

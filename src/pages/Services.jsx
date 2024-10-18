@@ -9,8 +9,8 @@ const Services = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <div className='bg-[#e9e2f7]'>
-            <HeroSection title1={"Trouvez votre "} title2={"bonheur chez opale !"} />
+        <div className='bg-[#fde6e6]'>
+            <HeroSection title1={"votre bonheur, "} title2={"opale !"} />
             <WebSite/>
             <Maintenance />
         </div>
