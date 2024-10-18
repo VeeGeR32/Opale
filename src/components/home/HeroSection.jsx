@@ -17,10 +17,11 @@ function HeroSection() {
             <h2 className="text-base sm:text-lg lg:text-xl font-normal mb-4 text-black font-[poppins] uppercase text-center">
               De la conception à la mise en ligne, nous créons des sites web qui captivent et convertissent.
             </h2>
-            <Link
-              to="/services">src="https://icons.veryicoition-all'>
-                <img className='h-12 mb-3 group-hover:scale-110 group-hover:rotate-180 duration-700 transition-all group-active:scale-90 cursor-pointer' src={logo}></img>
-                <img className='h-4 group-hover:scale-110 transition-all  duration-200' n.com/png/o/internet--web/industrial-icon/up-arrow.png" alt="" />
+            <Link to="/services"  >
+                <div className='flex flex-col justify-center items-center group bg-white/20 backdrop-blur-sm px-3 py-3 rounded-lg active:scale-105 trans ition-all' >
+              
+                  <img className='h-12 mb-3 group-hover:scale-110 group-hover:rotate-180 duration-700 transition-all group-active:scale-90 cursor-pointer' src={logo}></img>
+                  <img className='h-4 group-hover:scale-110 transition-all  duration-200' alt=" " src="https://icons.veryicon.com/png/o/internet--web/industrial-icon/up-arrow.png" ></img>
               </div>
             </Link>
           </div>
@@ -31,4 +32,4 @@ function HeroSection() {
 }
 
 export default HeroSection;
-              <div className='flex flex-col justify-center items-center group bg-white/20 backdrop-blur-sm px-3 py-3 rounded-lg active:scale-105 trans
+             
